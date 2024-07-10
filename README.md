@@ -1,6 +1,6 @@
 # Project Setup
 
-![My Logo](https://cdn.allfamous.org/people/headshots/pumba-caracal-hq5d-1644288306534-allfamous.org.jpg)
+<img src="https://cdn.allfamous.org/people/headshots/pumba-caracal-hq5d-1644288306534-allfamous.org.jpg" alt="My Logo" width="200"/>
 
 ## สร้างฐานข้อมูล customers เลือก utf8_general_ci
 
