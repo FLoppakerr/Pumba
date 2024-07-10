@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Management System</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-</head>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <a class="navbar-brand" href="#">Data Management System</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,10 +24,10 @@
                     <a class="nav-link" href="#">หน้าหลัก</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ข้อมูล</a>
-                </li>
+                    <a class="nav-link" href="tabledata.php">ข้อมูล</a>
+                </li>                
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="https://github.com/FLoppakerr" target="_blank">ติดต่อ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
@@ -35,70 +37,28 @@
     </nav>
 
     <div class="container mt-5">
-        <div class="card">
-            <div class="card-header bg-primary text-white">
-                <h2><a href="#" class="btn btn-green">กดเพื่อค้นหาข้อมูล</a></h2>
-            </div>
-            <div class="card-body">
-                <p class="card-text">รายละเอียดการค้นหาข้อมูลของลูกค้า:</p>
-                <form>
-                    <div class="form-group">
-                        <label for="businessName">ชื่อที่ใช้ดำเนินธุรกิจ</label>
-                        <input type="text" class="form-control" id="businessName"
-                            placeholder="ใส่ชื่อที่ใช้ดำเนินธุรกิจ">
-                    </div>
-                    <div class="form-group">
-                        <label for="companyName">ชื่อบริษัท</label>
-                        <input type="text" class="form-control" id="companyName" placeholder="ใส่ชื่อบริษัท">
-                    </div>
-                    <div class="form-group">
-                        <label for="contactName">ชื่อผู้ติดต่อ</label>
-                        <input type="text" class="form-control" id="contactName" placeholder="ใส่ชื่อผู้ติดต่อ">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">อีเมล</label>
-                        <input type="email" class="form-control" id="email" placeholder="ใส่อีเมล">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">เบอร์โทร</label>
-                        <input type="text" class="form-control" id="phone" placeholder="ใส่เบอร์โทร">
-                    </div>
-                    <div class="form-group">
-                        <label for="lineID">LineID</label>
-                        <input type="text" class="form-control" id="lineID" placeholder="ใส่ LineID">
-                    </div>
-                    <div class="form-group">
-                        <label for="facebook">Facebook</label>
-                        <input type="text" class="form-control" id="facebook" placeholder="ใส่ Facebook">
-                    </div>
-                    <div class="form-group">
-                        <label for="thai_provinces">จังหวัดที่ตั้ง</label>
-                        <select class="form-control" id="thai_provinces" onchange="updateDistricts()">
-                            <option value="">เลือกจังหวัด</option>
-                            <!-- นำตัวเลือกจังหวัดที่ได้มาแสดงผล -->
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="thai_district">อำเภอ/เขต</label>
-                        <select class="form-control" id="thai_district">
-                            <option value="">เลือกอำเภอ/เขต</option>
-                            <!-- ตัวเลือกของอำเภอ/เขตจะถูกเติมโดย JavaScript -->
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-green">ค้นหา</button>
-                    <button type="submit" class="btn btn-green">ค้นหา</button>
-                </form>
-            </div>
-        </div>
+        <button type="button" class="btn btn-primary" onclick="showModal()">
+            เพิ่มข้อมูลลูกค้า
+        </button>
+
+        <!-- Container for modal content -->
+        <div id="modalContainer"></div>
     </div>
 
-    <footer class="bg-dark text-white text-center py-0.5">
+    <footer class="bg-dark text-white text-center py-2">
         <p>&copy; 2024 Data Management System. ขอฉัน.</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showModal() {
+            fetch('insertdata.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('modalContainer').innerHTML = html;
+                    $('#addCustomerModal').modal('show');
+                })
+                .catch(error => console.error('Error loading modal:', error));
+        }
+    </script>
 </body>
-
 </html>
