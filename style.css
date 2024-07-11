@@ -84,3 +84,16 @@ footer {
     text-decoration: none;
     color: inherit;
 }
+
+.modal-dialog {
+    margin-top: 10%;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+/* Hover dropdown menu */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}

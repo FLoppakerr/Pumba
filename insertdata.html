@@ -1,16 +1,20 @@
+<!-- insertdata.html -->
+
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>เพิ่มข้อมูลลูกค้า</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <body>
     <!-- Modal Content -->
     <div class="modal fade" id="addCustomerModal" tabindex="-1" role="dialog" aria-labelledby="addCustomerModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="addCustomerModalLabel">เพิ่มข้อมูลลูกค้า</h5>
@@ -19,58 +23,85 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="businessName">ชื่อที่ใช้ดำเนินธุรกิจ</label>
-                                <input type="text" class="form-control" id="businessName" placeholder="ใส่ชื่อที่ใช้ดำเนินธุรกิจ">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="companyName">ชื่อบริษัท</label>
-                                <input type="text" class="form-control" id="companyName" placeholder="ใส่ชื่อบริษัท">
-                            </div>
-                        </div>
+                    <form action="insertdata.php" method="POST">
                         <div class="form-group">
-                            <label for="contactName">ชื่อผู้ติดต่อ</label>
-                            <input type="text" class="form-control" id="contactName" placeholder="ใส่ชื่อผู้ติดต่อ">
+                            <label for="business_type">ประเภทธุรกิจ</label>
+                            <input type="text" class="form-control" id="business_type" name="business_type"
+                                placeholder="ใส่ประเภทธุรกิจ">
                         </div>
-                        <div class="form-group">
-                            <label for="email">อีเมล</label>
-                            <input type="email" class="form-control" id="email" placeholder="ใส่อีเมล">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="business_name">ชื่อในการดำเนินธุรกิจ</label>
+                                    <input type="text" class="form-control" id="business_name" name="business_name"
+                                        placeholder="ใส่ชื่อที่ใช้ดำเนินธุรกิจ">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="company_name">ชื่อบริษัท</label>
+                                    <input type="text" class="form-control" id="company_name" name="company_name"
+                                        placeholder="ใส่ชื่อบริษัท">
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="contact_name">ชื่อผู้ติดต่อ</label>
+                                    <input type="text" class="form-control" id="contact_name" name="contact_name" placeholder="ใส่ชื่อผู้ติดต่อ">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">อีเมล</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="ใส่อีเมล">
+                                </div>
+                            </div>
                         </div>
+                        
                         <div class="form-group">
                             <label for="phone">เบอร์โทร</label>
-                            <input type="text" class="form-control" id="phone" placeholder="ใส่เบอร์โทร">
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="ใส่เบอร์โทร">
                         </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="line_id">LineID</label>
+                                    <input type="text" class="form-control" id="line_id" name="line_id" placeholder="ใส่ LineID">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="facebook">Facebook</label>
+                                    <input type="text" class="form-control" id="facebook" name="facebook" placeholder="ใส่ Facebook">
+                                </div>
+                            </div>
+                        </div>
+                        
+
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="lineID">LineID</label>
-                                <input type="text" class="form-control" id="lineID" placeholder="ใส่ LineID">
+                                <label for="province">จังหวัดที่ตั้ง</label>
+                                <select class="form-control" id="province" name="province"
+                                    onchange="updateDistricts()">
+                                    <option value="">เลือกจังหวัด</option>
+                                    <!-- นำตัวเลือกจังหวัดที่ได้มาแสดงผล -->
+                                </select>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="facebook">Facebook</label>
-                                <input type="text" class="form-control" id="facebook" placeholder="ใส่ Facebook">
+                                <label for="district">อำเภอ/เขต</label>
+                                <select class="form-control" id="district" name="district">
+                                    <option value="">เลือกอำเภอ/เขต</option>
+                                    <!-- ตัวเลือกของอำเภอ/เขตจะถูกเติมโดย JavaScript -->
+                                </select>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="thai_provinces">จังหวัดที่ตั้ง</label>
-                            <select class="form-control" id="thai_provinces" onchange="updateDistricts()">
-                                <option value="">เลือกจังหวัด</option>
-                                <!-- นำตัวเลือกจังหวัดที่ได้มาแสดงผล -->
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="thai_district">อำเภอ/เขต</label>
-                            <select class="form-control" id="thai_district">
-                                <option value="">เลือกอำเภอ/เขต</option>
-                                <!-- ตัวเลือกของอำเภอ/เขตจะถูกเติมโดย JavaScript -->
-                            </select>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
-                    <button type="button" class="btn btn-primary">เพิ่มข้อมูลลูกค้า</button>
+                    <button type="submit" class="btn btn-primary">เพิ่มข้อมูลลูกค้า</button>
                 </div>
             </div>
         </div>
