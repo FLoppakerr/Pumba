@@ -1,5 +1,3 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +9,15 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand" href="#">Data Management System</a>
+        <a class="navbar-brand" href="index.php">Data Management System</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto" style="width: 300px;">
+                <input type="text" class="form-control" id="searchInput" placeholder="ค้นหาข้อมูลลูกค้า...">
+            </div>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">หน้าหลัก</a>
@@ -46,22 +47,24 @@
         <button type="button" class="btn btn-primary" onclick="showinsertdataModal()">
             เพิ่มข้อมูลลูกค้า
         </button>
-
-        <!-- Container for modal content -->
+        <h3 class="mt-4">กราฟ ดูข้อมูล</h3>
+        <select id="provinceCount" class="form-control mb-3" onchange="updateChart()">
+            <option value="10">Top 10 Provinces</option>
+            <option value="50">Top 50 Provinces</option>
+            <option value="77">Top 77 Provinces</option>
+        </select>
+        <canvas id="myChart" width="400" height="200"></canvas>
+        
         <div id="modalContainer"></div>
     </div>
-
-    <footer class="bg-dark text-white text-center py-2">
-        <p>&copy; 2024 Data Management System. ขอฉัน.</p>
-    </footer>
-
-    <!-- Login Modal -->
     <div id="loginModalContainer"></div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="login.js"></script>
     <script src="insertdata.js"></script>
+    <script src="Chart.js"></script>
 </body>
 </html>

@@ -1,16 +1,15 @@
 <?php
-// การเชื่อมต่อฐานข้อมูล MySQL
 $servername = "localhost";
-$username = "username"; // แทนที่ด้วยชื่อผู้ใช้ MySQL
-$password = "password"; // แทนที่ด้วยรหัสผ่าน MySQL
-$dbname = "mydata"; // แทนที่ด้วยชื่อฐานข้อมูล MySQL
+$username = "root";
+$password = "";
+$dbname = "customers";
 
 // สร้างการเชื่อมต่อ
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // ตรวจสอบการเชื่อมต่อ
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("การเชื่อมต่อล้มเหลว: " . $conn->connect_error);
 }
 
 // สร้างคำสั่ง SQL เพื่อดึงข้อมูลจังหวัด
