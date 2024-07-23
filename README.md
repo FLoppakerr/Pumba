@@ -13,4 +13,4 @@
 
 ฐานข้อมูลนี้จะถูกใช้งานในโปรเจ็กต์ของเราเพื่อเก็บข้อมูลลูกค้า และจะทำให้การจัดการข้อมูลรองรับการใช้งานภาษาไทยได้อย่างถูกต้อง
 
-![Pumba](https://preview.redd.it/k47fwd09gql71.jpg?width=640&crop=smart&auto=webp&s=f3876b1f37d7b40a4bff88dbe66df2d2d4ac97e8)
+![Pumba](https://preview.redd.it/nt63o3o9lxl71.jpg?auto=webp&s=14fa6f7b327b315eae5f031429c7f366bb36610b)
