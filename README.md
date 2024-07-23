@@ -1,5 +1,9 @@
 # การตั้งค่าฐานข้อมูล SQL
 
+<div style="text-align: center;">
+<img src="https://preview.redd.it/nt63o3o9lxl71.jpg?auto=webp&s=14fa6f7b327b315eae5f031429c7f366bb36610b" alt="Pumba" width="300" height="300">
+</div>
+
 ฉันได้ตั้งชื่อฐานข้อมูลใน SQL ชื่อว่า `customers` และได้ตั้งค่า Collation เป็น `utf8_general_ci` ดังนี้:
 
 1. **ชื่อฐานข้อมูล:** customers
@@ -13,6 +17,4 @@
 
 ฐานข้อมูลนี้จะถูกใช้งานในโปรเจ็กต์ของเราเพื่อเก็บข้อมูลลูกค้า และจะทำให้การจัดการข้อมูลรองรับการใช้งานภาษาไทยได้อย่างถูกต้อง
 
-<div style="text-align: center;">
-<img src="https://preview.redd.it/nt63o3o9lxl71.jpg?auto=webp&s=14fa6f7b327b315eae5f031429c7f366bb36610b" alt="Pumba" width="300" height="300">
-</div>
+
