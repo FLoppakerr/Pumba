@@ -1,0 +1,95 @@
+/* ปรับแต่ง Modal */
+.modal-header {
+    background-color: var(--hoteljob-almost-black);
+    /* สีพื้นหลังของ Header */
+    color: white;
+    /* สีตัวอักษร */
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-title {
+    font-family: 'Anuphan', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: normal;
+    letter-spacing: 4px;
+
+}
+.modal-body {
+    font-family: 'Anuphan', sans-serif;
+    padding: 20px;
+    background-color: var(--hoteljob-white);
+    /* สีพื้นหลังของ Body */
+}
+
+.modal-footer {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.close {
+    color: white;
+    opacity: 0.8;
+}
+
+.close:hover,
+.close:focus {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.form-group label {
+    font-family: 'Anuphan', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--hoteljob-almost-black);
+    /* สีข้อความ */
+}
+
+.form-control {
+    font-family: 'Anuphan', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: #3198bb;
+    border-color: #3198bb;
+    font-family: 'Anuphan', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: #267b92;
+    border-color: #267b92;
+}
+
+#insertModal .form-control:focus {
+    border-color: #3198bb;
+    box-shadow: 0 0 5px rgba(49, 152, 187, 0.5);
+}
+
+/* ปรับแต่ง Select Fields */
+select.form-control {
+    background-color: #ffffff;
+}
+
+select.form-control:focus {
+    border-color: #3198bb;
+    box-shadow: 0 0 5px rgba(49, 152, 187, 0.5);
+}
+.modal-body .row {
+    margin-bottom: 15px;
+}
+
+.modal-body .form-group {
+    margin-bottom: 15px;
+}
