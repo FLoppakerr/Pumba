@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@400;700&display=swap');
+@import url('hoteljob_color.css');
+body {
+    font-family: 'Anuphan', sans-serif;
+    background-color: var(--hoteljob-dark-blue)!important;
+    padding: 20px;
+    /* เพิ่ม padding ของ body */
+}
+
+.customer-id {
+    color: var(--hoteljob-powder-blue);
+    font-size: 3rem;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--hoteljob-powder-blue);
+    text-align: flex-start;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    font-size: 3rem;
+}
+label {
+    letter-spacing: 1.5px;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size:large
+}
+/* Navbar */
+.navbar-default {
+    background-color: #3198BB;
+    border-color: #3198BB;
+}
+
+.navbar-brand,
+.navbar-nav>li>a {
+    color: var(--hoteljob-white) !important;
+}
+
+.navbar-nav>li>a:hover {
+    background-color: #28708a !important;
+    color: #fff !important;
+}
+
+/* กำหนดขนาดของฟอร์มกลุ่มที่เป็นปุ่ม */
+.button-group {
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    margin-top: 10px;
+    margin-left: 150px;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    /* สีพื้นหลังเมื่อโฮเวอร์ */
+    border-color: #1e7e34;
+    /* สีขอบเมื่อโฮเวอร์ */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* เพิ่มเงาให้ปุ่มเมื่อโฮเวอร์ */
+}
+/* ฟอร์ม */
+.form-section {
+    background-color: #ffffff;
+    padding: 20px;
+    /* เพิ่ม padding ของฟอร์ม */
+    margin-bottom: 20px;
+    /* เพิ่ม margin ด้านล่างของฟอร์ม */
+    border-radius: 8px;
+    /* ขยายขนาด border-radius */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* ขยายขนาด shadow */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    /* ขยายช่องว่างระหว่างคอลัมน์ */
+    max-width: 800px;
+    /* ขยายความกว้างสูงสุดของฟอร์ม */
+    margin: 0 auto;
+    /* จัดกลางฟอร์ม */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    /* เพิ่ม margin ด้านล่างของ form-group */
+}
+
+
+.form-control {
+    border-radius: 6px;
+    /* ขยายขนาด border-radius */
+    border-color: #ced4da;
+    font-size: 16px;
+    /* ขยายขนาดฟอนต์ของฟอร์ม */
+    padding: 1px 16px;
+    /* ขยายขนาด padding */
+    max-width: 100%;
+    /* กำหนดให้กล่องมีความกว้างเต็มที่ของ parent */
+}
+
+.form-control:focus {
+    border-color: #3198BB;
+    box-shadow: 0 0 0 0.2rem rgba(49, 152, 187, 0.25);
+}
+
+/* Dropdown */
+select.form-control {
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 1px 16px;
+    /* ขยายขนาด padding */
+    max-width: 100%;
+    /* กำหนดให้กล่องมีความกว้างเต็มที่ของ parent */
+}
+
+select.form-control:focus {
+    border-color: #3198BB;
+    box-shadow: 0 0 0 0.2rem rgba(49, 152, 187, 0.25);
+}
