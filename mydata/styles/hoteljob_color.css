@@ -1,0 +1,25 @@
+:root {
+    --hoteljob-white: #ffffff;/* ขาว (White) */
+    --hoteljob-cream: #fbf3d5;/* ครีมอ่อน (Cream) */
+    --hoteljob-ecru: #f2efe5;/* เอครู (Ecru) */
+    --hoteljob-Soft-Gray: #f1f5f9;/* ขาวอ่อน (Soft-Gray) */
+    --hoteljob-pale-blue: #e1e7ef; /* น้ำเงินอ่อน (Pale Blue) */
+    --hoteljob-off-white: #e3e1d9; /* ขาวออฟไวท์ (Off White) */
+    --hoteljob-light-beige: #d6dac8; /* เบจอ่อน (Light Beige) */
+    --hoteljob-sandy: #eadfb4; /* ทราย (Sandy) */
+    --hoteljob-soft-green: #9cafaa;/* เขียวอ่อน (Soft Green) */
+    --hoteljob-powder-blue: #9bb0c1;/* น้ำเงินพาวเดอร์ (Powder Blue) */
+    --hoteljob-gray: #b4b4b8;/* เทา (Gray) */
+    --hoteljob-Light-Mist: #c7c8cc;/* เทาอ่อนมาก (Light-Mist) */
+    --hoteljob-soft-blue: #babded;/* ฟ้าอ่อน (Soft Blue) */
+    --hoteljob-coral: #f6995c;/* ส้ม (Coral) */
+    --hoteljob-orange: #f26d2b;/* ส้ม (Orange) */
+    --hoteljob-peach: #efbc9b;/* พีช (Peach) */
+    --hoteljob-dark-blue: #51829b;/* น้ำเงินเข้ม (Dark Blue) */
+    --hoteljob-vibrant-green: #1def71;/* เขียวสด (Vibrant Green) */
+    --hoteljob-blue: #3198bb;/* น้ำเงิน (Hoteljob Blue) */
+    --hoteljob-blue-dark: #0088ff;/* น้ำเงิน (Blue) */
+    --hoteljob-dark-gray: #303036;/* เทาเข้ม (Dark Gray) */
+    --hoteljob-almost-black: #050401;/* ดำเกือบดำ (Almost Black) */
+    --hoteljob-black: #000000;/* ดำ (Black) */
+}
