@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@400;700&display=swap');
+@import url('hoteljob_color.css');
+    
+body {
+    font-family: 'Anuphan', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.42857143 !important;
+    color: #333 !important;
+    background-color: var(--hoteljob-off-white)!important;
+    }
+
+h2 {
+    font-family: 'Anuphan'!important;
+    font-size: 2.25rem !important;
+    color: var(--hoteljob-dark-gray) !important;
+    text-align: flex-start !important;
+    font-weight: 100 !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px !important;
+    letter-spacing: 3px !important;
+    margin-left: 10px;
+}
+
+.navbar-default {
+    background-color:#3498db!important;
+    border-color:#3498db!important;
+}
+/* จัดการรูปโปรไฟล์ใน dropdown */
+.dropdown-header {
+    text-align: center;
+    padding: 10px;
+}
+
+.dropdown-header img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+/* จัดการชื่อให้อยู่ด้านล่างรูป */
+.dropdown-header div {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #000000; /* ปรับสีข้อความตามที่ต้องการ */
+}
+
+
+.profile-img {
+    max-width: 50px!important;
+    max-height: 50px!important;
+    border-radius: 50%!important;
+    border: 3px solid #3498db; /* ขอบในสีฟ้า */
+    box-shadow: 0 0 0 2px white; /* ขอบนอกสีขาว */
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    color: #fff;
+    background-color: #286090 !important;
+    border-color: #122b40 !important;
+}
+
+.navbar-btn {
+    font-family: 'Anuphan', sans-serif;
+    margin-top: 23px !important;
+    margin-bottom: 8px !important;
+    margin-right: 10px!important;
+}
+
+.navbar-default .navbar-brand {
+    font-family: 'Anuphan', sans-serif;
+    color: var(--hoteljob-white) !important;
+    font-size: 5rem !important;
+    font-weight: 900;
+    padding: 0px !important;
+    margin-top: 15px!important;
+    margin-left: 25px !important;
+    background-color: none !important;
+    border-color: none !important;
+    margin-bottom: 0px !important;
+}
+
+.btn-primary {
+    font-family: 'Anuphan', sans-serif !important;
+    color: #fff !important;
+    background-color: #3498db !important;
+    border-color: var(--hoteljob-white) !important;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: var(--hoteljob-white);
+    background-color: #3498db !important;
+}
+
+
+label {
+    display: inline-block !important;
+    max-width: 100% !important;
+    font-weight: 700 !important;
+    font-family: 'Anuphan', sans-serif !important;
+    margin: 10px !important;
+}
+
+
+.btn-success {
+    display: inline-flex;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: bold !important; 
+    color: #3498db !important;
+    background-color: #ffffff !important; /* ใช้สีดำ */
+    border: none !important;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-success i {
+    margin-right: 8px;
+    font-size: 18px; /* ขนาดของไอคอน */
+}
+
+.btn-warning {
+    color: var(--hoteljob-black)!important;
+    background-color: var(--hoteljob-ecru)!important;
+    border-color: var(--hoteljob-ecru) !important;
+    font-size: 1.5rem !important;
+}
+.btn-danger {
+    color: var(--hoteljob-black) !important;
+    background-color: var(--hoteljob-cream) !important;
+    border-color: var(--hoteljob-cream) !important;
+    font-size: 1.5rem !important;
+}
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: 0 auto!important;
+    margin-left: 0 auto!important;
+    margin-bottom: 0 auto!important;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #ffffff !important;
+    background-color: #3498db!important;
+    border-color: #ffffff!important;
+    font-size: 14px!important;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    margin-right: 10px!important;
+    margin-bottom: 20px!important;
+    border-bottom-width: 1px!important;
+    margin-left: 1px!important;
+    padding-bottom: 6px!important;
+    padding-top: 5px!important;
+}
+.nav>li>a>img {
+    margin-top: 10px!important;
+    margin-left: 2px!important;
+    max-width: none!important;
+}
+
+@media (max-width: 767px) {
+    /* ปรับแต่งสำหรับอุปกรณ์มือถือ */
+    body {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 2rem;
+    }
+
+    .profile-img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    .btn-primary {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* ปรับแต่งสำหรับอุปกรณ์ Tablet */
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .navbar-brand {
+        font-size: 3rem;
+    }
+
+    .profile-img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+    .btn-primary {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* ปรับแต่งสำหรับอุปกรณ์ Desktop */
+    body {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 5rem;
+    }
+
+    .profile-img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .btn-primary {
+        padding: 20px;
+        font-size: 18px;
+    }
+}
+
+
