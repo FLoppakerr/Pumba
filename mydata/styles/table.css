@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@400;700&display=swap');
+@import url('hoteljob_color.css');
+
+#example thead {
+    background-color:#3498db !important;
+    color: var(--hoteljob-white)!important;
+    font-family: 'Anuphan', sans-serif!important;
+
+}
+
+#example tbody {
+    background-color: var(--hoteljob-white);
+    /* สีฟ้า */
+    color: var(--hoteljob-black);
+    font-family: 'Anuphan', sans-serif;
+}
+#example tbody tr:hover {
+    background-color: #def8ff;
+}
+
+/* ปรับแต่ง padding และ font size */
+#example th, #example td {
+    border: 1px solid var(--hoteljob-off-white);
+    padding: 12px;
+    text-align: left;
+    font-size: 1.5rem;
+    font-family: 'Anuphan', sans-serif !important;
+    padding: 10px;
+    border-radius: 0px;
+}
+div.dt-container {
+    position: relative;
+    clear: both;
+    background-color: var(--hoteljob-off-white);
+    border-radius: 10px;
+}
+div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+    justify-content: flex-start !important;
+    margin-right: auto !important;
+    margin-left: 55px;
+}
+div.dt-container div.dt-layout-row { /* barเลือกหน้า */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0.75em 0;
+    background-color: var(--hoteljob-white);
+    border-radius: 10px;
+}
+
+div.dt-container .dt-search input { /* search */
+    border: 1px solid #aaa !important;
+    border-radius: 3px !important;
+    padding: 5px !important;
+    background-color: transparent !important;
+    color: inherit !important;
+    margin-left: 3px !important;
+    font-family: 'Anuphan', sans-serif !important;
+    margin-right: 55px;
+}
+
+div.dt-container .dt-length,
+div.dt-container .dt-search,
+div.dt-container .dt-info,
+div.dt-container .dt-processing,
+div.dt-container .dt-paging {
+    font-family: 'Anuphan', sans-serif;
+    font-size: 2rem;
+}
+
+/* ปรับสีปุ่มภายใน div.dt-layout-cell.dt-layout-end */
+.div.dt-layout-cell.dt-layout-end .btn {
+    background-color: #0088ff;
+    /* สีพื้นหลังของปุ่ม */
+    color: #fff;
+    /* สีของข้อความในปุ่ม */
+    border-color: #0056b3;
+    /* สีของเส้นขอบปุ่ม */
+}
+
+/* เปลี่ยนสีปุ่มเมื่อ hover */
+.div.dt-layout-cell.dt-layout-end .btn:hover {
+    background-color: #0056b3;
+    /* สีพื้นหลังเมื่อ hover */
+    color: #fff;
+    /* สีของข้อความเมื่อ hover */
+    border-color: #004494;
+    /* สีของเส้นขอบเมื่อ hover */
+}
+
+/* ปรับสีของปุ่มที่ active (ถูกคลิก) */
+.div.dt-layout-cell.dt-layout-end .btn:active {
+    background-color: #004494;
+    /* สีพื้นหลังเมื่อคลิก */
+    color: #fff;
+    /* สีของข้อความเมื่อคลิก */
+    border-color: #003366;
+    /* สีของเส้นขอบเมื่อคลิก */
+}
+
+
+div.dt-container .dt-paging .dt-paging-button:hover {
+    color: #ffffff !important;
+    font-family: 'Anuphan', sans-serif !important;
+    border: 3px solid linear-gradient(135deg, var(--hoteljob-soft-blue), var(--hoteljob-blue-dark)) !important;
+    border-radius: 50px;
+    background-color: whitesmoke !important;
+    background: linear-gradient(135deg, var(--hoteljob-soft-blue), var(--hoteljob-blue-dark)) !important;
+    font-weight: 300 !important;
+}
+
+div.dt-container .dt-paging .dt-paging-button.current,
+div.dt-container .dt-paging .dt-paging-button.current:hover {
+    color: #fff !important;
+    font-family: 'Anuphan', sans-serif !important;
+    border: 3px solid var(--hoteljob-blue-dark) !important;
+    border-radius: 50px;
+    background-color: whitesmoke !important;
+    background: linear-gradient(135deg, #ffffff, #ffffff) !important;
+    font-weight: 300 !important;
+}
+/* ซ่อนลูกศรจัดลำดับในคอลัมน์แรก (checkbox) */
+table.dataTable thead > tr > th:first-child span.dt-column-order {
+    display: none !important;
+}
+/* จัด checkbox ให้อยู่ตรงกลางคอลัมน์ */
+th:first-child, td:first-child {
+    text-align: center;  /* จัดให้ checkbox อยู่ตรงกลาง */
+    vertical-align: middle;  /* จัด checkbox ให้อยู่กลางแนวตั้ง */
+    width: 40px;  /* กำหนดความกว้างของคอลัมน์ checkbox ให้พอเหมาะ */
+}
+
+/* ปรับขนาด checkbox */
+input[type="checkbox"] {
+    width: 16px;   /* ขนาดของ checkbox */
+    height: 16px;  /* ความสูงของ checkbox */
+}
+/* ซ่อน Scrollbar */
+.table-responsive {
+    overflow-x: hidden; /* ซ่อน Scrollbar แนวนอน */
+    cursor: grab;
+}
+
+/* ให้สามารถเลื่อนโดยการคลิกและลาก */
+.table-responsive.active {
+    cursor: grabbing;
+}
+
+/* ซ่อน Scrollbar บน Webkit-based browsers เช่น Chrome และ Safari */
+.table-responsive::-webkit-scrollbar {
+    display: none;
+}
+
+/* ซ่อน Scrollbar บน Firefox */
+.table-responsive {
+    scrollbar-width: none; /* Firefox */
+}
+/* กำหนดให้เคอร์เซอร์เป็นรูปมือเมื่ออยู่เหนือเซลล์ */
+#example td {
+    transition: none; /* ปิดการเปลี่ยนแปลงเมื่อโฮเวอร์ */
+    cursor: text;
+}
